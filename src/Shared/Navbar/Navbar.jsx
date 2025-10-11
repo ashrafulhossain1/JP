@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 export default function Navbar() {
+  const { googleLogin } = useAuth()
+  console.log(googleLogin);
 
   const isActive = false;
 
@@ -75,7 +78,7 @@ export default function Navbar() {
           {
             isActive ? <img alt="Profile" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               :
-              <p className="flex font-bold">Sign In</p>
+              <p onClick={googleLogin} className="flex font-bold">Sign In</p>
           }
         </div>
       </div>
