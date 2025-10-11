@@ -13,24 +13,28 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
+        index: true,
+        element: <SimpleComponent />,
+      },
+      {
         path: '/events',
-        element: <Events></Events> ,
+        element: <Events />,
       },
       {
         path: "/my-bookings",
-        element: <MyBookings></MyBookings>
+        element: <MyBookings />
       },
       {
         path: "add-event",
-        element: <AddEvent></AddEvent>
+        element: <AddEvent />
       },
       {
         path: "/signIn",
-        element: <SignIn></SignIn>
+        element: <SignIn />
       },
       {
         path: "/signUp",
-        element: <SignUp></SignUp>
+        element: <SignUp />
       }
     ],
   },
